@@ -1,13 +1,10 @@
 import { Module } from '@nestjs/common';
-import { RedisService } from 'nestjs-redis';
+// import { RedisService } from 'nestjs-redis';
+import { RedisModule } from 'nestjs-redis';
 
 
 // this is just to created connection in redisclient
 @Module({
-    providers: [RedisService],
-    exports:[RedisService]
+   imports: [RedisModule]
 })
-export class RedisModule {
-  
-
-}
+export class AppModuleRedis {}

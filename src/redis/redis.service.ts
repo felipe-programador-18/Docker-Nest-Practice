@@ -8,10 +8,7 @@ export class RedisService {
   private readonly client: Redis.Redis;
 
   constructor() {
-    this.client = new Redis({
-      host: process.env.REDIS_HOST || 'localhost',
-      port: parseInt(process.env.REDIS_PORT, 10) || 6379,
-    });
+    this.client = new Redis();
   }
 
   getClient(): Redis.Redis {
